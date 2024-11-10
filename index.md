@@ -5,12 +5,10 @@ permalink: /
 title: Free$^2$Guide: Enhancing Video Generation Through Training-free & Gradient-free Reward-based Guidance
 authors:
     Anonymous
-<!--
-paper: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf
+<!--paper: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf
 video: https://www.youtube.com/results?search_query=turing+machine
---!>
+-->
 code: https://github.com/topics/turing-machines
-data: https://huggingface.co/docs/datasets
 ---
 
 <!-- Using HTML to center the abstract -->
@@ -18,19 +16,7 @@ data: https://huggingface.co/docs/datasets
     <div class="column is-four-fifths">
         <h2>Abstract</h2>
         <div class="content has-text-justified">
-The "computable" numbers may be described briefly as the real
-numbers whose expressions as a decimal are calculable by finite means.
-Although the subject of this paper is ostensibly the computable numbers.
-it is almost equally easy to define and investigate computable functions
-of an integral variable or a real or computable variable, computable
-predicates, and so forth. The fundamental problems involved are,
-however, the same in each case, and I have chosen the computable numbers
-for explicit treatment as involving the least cumbrous technique. I hope
-shortly to give an account of the relations of the computable numbers,
-functions, and so forth to one another. This will include a development
-of the theory of functions of a real variable expressed in terms of computable
-numbers. According to my definition, a number is computable
-if its decimal can be written down by a machine...
+Diffusion models have achieved impressive results in generative tasks like text-to-image (T2I) and text-to-video (T2V) synthesis. However, achieving accurate text alignment in T2V generation remains challenging due to the complex nature of maintaining temporal consistency across frames. In this paper, we propose **Free$^2$Guide**, a novel gradient-free framework for aligning generated videos with text prompts without requiring additional model training. Free$^2$Guide leverages path integral control to approximate guidance, adapting pre-trained image reward models—trained on large-scale image-text data—to steer video generation in alignment with text prompts. This design eliminates the need for differentiable reward functions, allowing the use of black-box vision-large language models (LVLMs) such as GPT-4o, as well as ensembling reward models for enhanced alignment. Our method significantly improves T2V generation performance in text-video alignment and video quality.
         </div>
     </div>
 </div>
