@@ -5,9 +5,8 @@ permalink: /
 title: Free$^2$Guide: Enhancing Video Generation Through Training-free & Gradient-free Reward-based Guidance
 authors:
     Anonymous
-<!--paper: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf
-video: https://www.youtube.com/results?search_query=turing+machine
--->
+<!--paper: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf-->
+<!--video: https://www.youtube.com/results?search_query=turing+machine-->
 code: https://github.com/topics/turing-machines
 ---
 
