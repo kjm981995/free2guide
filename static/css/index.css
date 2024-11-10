@@ -17,6 +17,21 @@ body {
   font-variant: small-caps;
 }
 
+/* Ensure the images stay in a row */
+.image-container {
+  display: flex;
+  justify-content: space-between;  /* Add spacing between images */
+}
+
+.image-item {
+  flex: 0 1 48%;  /* Set a maximum width for each image and allow it to adjust */
+  text-align: center;  /* Center the description below each image */
+}
+
+.image-item img {
+  width: 100%;  /* Make the images responsive and fit their containers */
+  height: auto;  /* Maintain aspect ratio */
+}
 
 .teaser .hero-body {
   padding-top: 0;
