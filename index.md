@@ -1,7 +1,8 @@
 ---
 layout: project_page
 permalink: /
-title: Free$^2$Guide: Enhancing Video Generation Through Training-free & Gradient-free Reward-based Guidance
+
+title: Free$^2$Guide Enhancing Video Generation Through Training-free & Gradient-free Reward-based Guidance
 authors:
     Anonymous
 code: https://github.com/topics/turing-machines
