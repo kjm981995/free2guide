@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Free$^2$Guide: Gradient-Free Path Integral Control for Enhancing Text-to-Video Generation with Large Vision-Language Models</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <!-- custom css file  -->
+  <link rel="stylesheet" href="./static/css/twentytwenty.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    .custom-slider-container {
+        width: 100%;
+        max-width: 900px; /* 슬라이더의 최대 너비 */
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .custom-slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .custom-slide {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-gif-wrapper {
+        display: flex;
+        justify-content: center; /* Horizontally centers the content */
+        align-items: center;     /* Vertically centers the content */
+        width: 100%;
+        height: 100%;            /* Ensures the height of the container is considered */
+    }
+
+    .custom-gif-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Vertically centers the video within the container */
+        align-items: center;     /* Horizontally centers the video within the container */
+        width: 30%;              /* Keeps the same width as before for each video container */
+        height: 100%;            /* Ensures the height of the container is used */
+    }
+
+
+    .custom-gif-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .custom-gif-container-4vid {    /* GIF container for 4 videos (comparison part) */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Vertically centers the video within the container */
+        align-items: center;     /* Horizontally centers the video within the container */
+        width: 30%;              /* Keeps the same width as before for each video container */
+        height: 100%;            /* Ensures the height of the container is used */
+    }
+
+    .custom-gif-container-4vid img {
+        width: 100%;
+        height: auto;
+    }
+
+    .custom-caption {
+        text-align: center;
+        margin-top: 5px;
+        font-weight: bold; /* Makes the caption bold */
+        font-size: 15px; /* Increases the font size (adjust as needed) */
+    }
+
+    .custom-top-caption {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    /* 좌우 화살표 */
+    .custom-arrow {
+      position: absolute;
+      top: 47%; /* Vertically centers the arrows */
+      transform: translateY(-50%); /* Centers vertically */
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 12px;
+      cursor: pointer;
+      z-index: 10; /* Ensure the arrows are above the videos */
+    }
+
+    .text-with-margin {
+      margin-top: 10px; /* Adds 20px space above the text */
+      margin-bottom: 50px;
+    }
+
+    .custom-prev {
+        left: -5px; /* Positions the left arrow slightly outside the video container */
+    }
+
+    .custom-next {
+        right: -5px; /* Positions the right arrow slightly outside the video container */
+    }
+
+    /* GIF들 간의 간격 */
+    .custom-gif-container:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    .custom-gif-container-4vid:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .dots-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: #717171;
+    }
+
+    .small-normal-text {
+      font-weight: normal;
+      font-size: 10px; /* Adjust to desired size */
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Free<sup>2</sup>Guide: Gradient-Free Path Integral Control for Enhancing Text-to-Video Generation with Large Vision-Language Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="#" class="external-link button is-normal is-rounded is-dark" onclick="return false;">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code(Coming soon)</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Hero Teaser -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+      <div id="results-small" class="carousel results-small">
+
+        <div class="item">
+          <div class="twentytwenty-container main-container" data-orientation="horizontal" ratio="0.5556">
+              <img src="./static/image/examples/corgi-1.gif" width="100%" />
+              <img src="./static/image/examples/corgi-2.gif" width="100%" />
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container main-container" data-orientation="horizontal" ratio="0.5556">
+              <img src="./static/image/examples/corgi-1.gif" width="100%" />
+              <img src="./static/image/examples/corgi-2.gif" width="100%" />
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container main-container" data-orientation="horizontal" ratio="0.5556">
+            <img src="./static/image/examples/corgi-1.gif" width="100%" />
+            <img src="./static/image/examples/corgi-2.gif" width="100%" />
+            </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container main-container" data-orientation="horizontal" ratio="0.5556">
+            <img src="./static/image/examples/corgi-1.gif" width="100%" />
+            <img src="./static/image/examples/corgi-2.gif" width="100%" />
+          </div>
+        </div>
+
+      </div>
+  </div>
+  <div class="spacer"></div>
+</section>
+
+<!-- End Teaser Video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p style="font-size:18px;">
+            Diffusion models have achieved impressive results in generative tasks like text-to-image (T2I) and text-to-video (T2V) synthesis. However, achieving accurate text alignment in T2V generation remains challenging due to the complex temporal dependency across frames. Existing reinforcement learning (RL)-based approaches to enhance text alignment often require differentiable reward functions or are constrained to limited prompts, hindering their scalability and applicability. In this paper, we propose <strong>Free<sup>2</sup>Guide</strong>, a novel gradient-free framework for aligning generated videos with text prompts without requiring additional model training. Leveraging principles from path integral control, Free<sup>2</sup>Guide approximates guidance for diffusion models using non-differentiable reward functions, thereby enabling the integration of powerful black-box Large Vision-Language Models (LVLMs) as reward model. Additionally, our framework supports the flexible ensembling of multiple reward models, including large-scale image-based models, to synergistically enhance alignment without incurring substantial computational overhead. We demonstrate that <strong>Free<sup>2</sup>Guide</strong> significantly improves text alignment across various dimensions and enhances the overall quality of generated videos.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Method -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="static/image/Method/method.png" alt="fig_pipeline"/>
+          <p style="font-size:18px; margin-top:30px;">
+            Overall pipeline of Free<sup>2</sup>Guide, leveraging path integral control to enhance text-video alignment without requiring reward gradient.
+            During the sampling process, Free<sup>2</sup>Guide generates multiple denoised video samples and evaluate text alignment using non-differentiable
+            Large Vision-Language Models (LVLMs).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method -->
+
+
+<!-- Comparison -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <!-- <div class="container"> -->
+    <div class="container is-max-desktop"  style="margin-top:30px;">
+      <div class="section-title has-text-centered">
+        <h2 class="title is-3"> Qualitative Comparison </h2>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="custom-slider-container">
+        <div class="custom-slider" id="custom-slider">
+            <!-- 첫 번째 세트 -->
+            <div class="custom-slide">
+                <div class="custom-top-caption">"A drone view of celebration with Christmas tree and fireworks."</div> <!-- Top caption added -->
+                <div class="custom-gif-wrapper">
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/examples/corgi-1.gif" alt="GIF 1">
+                        <div class="custom-caption">Baseline</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/examples/corgi-1.gif" alt="GIF 2">
+                        <div class="custom-caption">Baseline + CLIP</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/examples/corgi-1.gif" alt="GIF 3">
+                        <div class="custom-caption">Baseline + IR</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/examples/corgi-1.gif" alt="GIF 4">
+                        <div class="custom-caption">Baseline + GPT4o</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 두 번째 세트 -->
+            <div class="custom-slide">
+                <div class="custom-top-caption">"A cat wearing sunglasses and working as a lifeguard at a pool."</div> <!-- Top caption added -->
+                <div class="custom-gif-wrapper">
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/examples/corgi-1.gif" alt="GIF 4">
+                        <div class="custom-caption">Baseline</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/examples/corgi-1.gif" alt="GIF 5">
+                        <div class="custom-caption">Baseline + CLIP</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/examples/corgi-1.gif" alt="GIF 6">
+                        <div class="custom-caption">Baseline + IR</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/examples/corgi-1.gif" alt="GIF 7">
+                        <div class="custom-caption">Baseline + GPT4o</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-slide">
+              <div class="custom-top-caption">"Ashtray full of butts on table, smoke flowing on black background, close-up."</div> <!-- Top caption added -->
+              <div class="custom-gif-wrapper">
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/examples/corgi-1.gif" alt="GIF 4">
+                      <div class="custom-caption">Baseline</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/examples/corgi-1.gif" alt="GIF 5">
+                      <div class="custom-caption">Baseline + CLIP</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/examples/corgi-1.gif" alt="GIF 6">
+                      <div class="custom-caption">Baseline + IR</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/examples/corgi-1.gif" alt="GIF 7">
+                      <div class="custom-caption">Baseline + GPT4o</div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="custom-slide">
+              <div class="custom-top-caption">"A car accelerating to gain speed."</div> <!-- Top caption added -->
+              <div class="custom-gif-wrapper">
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/examples/corgi-1.gif" alt="GIF 4">
+                      <div class="custom-caption">Baseline</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/examples/corgi-1.gif" alt="GIF 5">
+                      <div class="custom-caption">Baseline + CLIP</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/examples/corgi-1.gif" alt="GIF 6">
+                      <div class="custom-caption">Baseline + IR</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/examples/corgi-1.gif" alt="GIF 7">
+                      <div class="custom-caption">Baseline + GPT4o</div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    
+        <!-- 좌우 화살표 -->
+        <button class="custom-arrow custom-prev" onclick="moveCustomSlide(-1)">&#10094;</button>
+        <button class="custom-arrow custom-next" onclick="moveCustomSlide(1)">&#10095;</button>
+
+        <div class="dots-container">
+          <span class="dot" onclick="setCurrentSlide(0)"></span>
+          <span class="dot" onclick="setCurrentSlide(1)"></span>
+          <span class="dot" onclick="setCurrentSlide(2)"></span>
+          <span class="dot" onclick="setCurrentSlide(3)"></span>
+          <span class="dot" onclick="setCurrentSlide(4)"></span>
+          <span class="dot" onclick="setCurrentSlide(5)"></span>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+      <div class="container is-max-desktop"  style="margin-top:30px;">
+        <div class="section-title has-text-centered">
+          <h2 class="title is-3"> Qualitative Results </h2>
+        </div>
+      
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
+              <div class="desc">Silhouette of the couple during sunset.</div>
+              <div class="video">
+                <img src="./static/image/examples/corgi-1.gif" width="100%" />
+              </div>
+              <div class="video">
+                <img src="./static/image/examples/corgi-2.gif" width="100%" />
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
+              <div class="desc">Bonfire near river.</div>
+              <div class="video">
+                <img src="./static/image/examples/corgi-1.gif" width="100%" />
+              </div>
+              <div class="video">
+                <img src="./static/image/examples/corgi-2.gif" width="100%" />
+              </div>
+            </div>
+          </div> 
+          <div class="item">
+            <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
+              <div class="desc">A footage of actor movie scene.</div>
+              <div class="video">
+                <img src="./static/image/examples/corgi-1.gif" width="100%" />
+              </div>
+              <div class="video">
+                <img src="./static/image/examples/corgi-2.gif" width="100%" />
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+      <p style="font-size:18px; margin-bottom:10px">
+        We observe that leveraging the GPT-4o model to assess text-video alignment improves alignment with respect to temporal dynamics (e.g. "tilt down") and semantic representation (e.g. "A and B").
+        These results indicate that LVLM can account for temporal information by processing multiple sub-frames of video simultaneously, with strong performance in spatial understanding.
+      </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- custom js file  -->
+<!-- <script defer src="./assets/js/fontawesome.all.min.js"></script> -->
+<script src="./static/js/bulma-carousel.min.js"></script>
+<script src="./static/js/bulma-slider.min.js"></script>
+<script src="./static/js/index.js"></script>
+<script src="./static/js/jquery.event.move.js"></script>
+<script src="./static/js/jquery.twentytwenty.js"></script>
+<script>
+$(function(){
+  $(".twentytwenty-container").twentytwenty({
+    default_offset_pct: 0.5, // How much of the before image is visible when the page loads
+    orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
+    // before_label: 'January 2017', // Set a custom before label
+    // after_label: 'March 2017', // Set a custom after label
+    // no_overlay: true, //Do not show the overlay with before and after
+    // move_slider_on_hover: true, // Move slider on mouse hover?
+    // move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
+    // click_to_move: false // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
+  });
+});
+
+$(function(){
+  $(".main-container").twentytwenty({default_offset_pct: 0.5, orientation: 'horizontal'});
+  // $(".twentytwenty-container", "#results-carousel").twentytwenty({default_offset_pct: 0.5, ratio: 0.5});
+});
+</script>
+
+<script>
+    let currentCustomIndex = 0;
+    const customSlider = document.getElementById('custom-slider');
+    const totalCustomSlides = document.querySelectorAll('.custom-slide').length;
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.remove('active');
+            if (index === currentCustomIndex) {
+                dot.classList.add('active');
+            }
+        });
+    }
+
+    function moveCustomSlide(direction) {
+        currentCustomIndex += direction;
+        if (currentCustomIndex < 0) {
+            currentCustomIndex = totalCustomSlides - 1;
+        } else if (currentCustomIndex >= totalCustomSlides) {
+            currentCustomIndex = 0;
+        }
+        customSlider.style.transform = `translateX(-${currentCustomIndex * 100}%)`;
+        updateDots();
+    }
+
+    function setCurrentSlide(index) {
+        currentCustomIndex = index;
+        customSlider.style.transform = `translateX(-${currentCustomIndex * 100}%)`;
+        updateDots();
+    }
+
+    // 초기 활성 점 업데이트
+    updateDots();
+</script>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

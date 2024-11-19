@@ -2,6 +2,35 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.results-small {
+  overflow: hidden;
+  /* height: 400px; */
+  /* height: 100%; */
+}
+
+.results-small .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.pd-image {
+  margin-top: 20px;
+}
+
+.results-small .desc {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 14px;
+  padding: 3px 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 128;
+}
 
 .footer .icon-link {
     font-size: 25px;
@@ -17,20 +46,34 @@ body {
   font-variant: small-caps;
 }
 
-/* Ensure the images stay in a row */
-.image-container {
-  display: flex;
-  justify-content: space-between;  /* Add spacing between images */
+.video {
+  position: relative;
+  width: 100%;
 }
 
-.image-item {
-  flex: 0 1 48%;  /* Set a maximum width for each image and allow it to adjust */
-  text-align: center;  /* Center the description below each image */
+.video img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.image-item img {
-  width: 100%;  /* Make the images responsive and fit their containers */
-  height: auto;  /* Maintain aspect ratio */
+.spacer {
+  height: 50px; /* Spacer block to add custom space between sections */
+}
+
+/* Description overlay inside the GIF at the bottom */
+.desc {
+  position: absolute;
+  bottom: 0; /* Positions the text at the bottom of the GIF */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent black background */
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 100; /* Ensures text is on top of the GIF */
 }
 
 .teaser .hero-body {
@@ -132,9 +175,7 @@ body {
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  padding: 0;
+  padding: 20px;
   font-size: 0;
 }
 
@@ -142,61 +183,13 @@ body {
   margin: 0;
 }
 
-.results-small {
-  overflow: hidden;
-  /* height: 400px; */
-  /* height: 100%; */
+.slider-pagination .slider-page {
+  background: #000000;
 }
 
-.results-small .item {
-  margin: 5px;
-  overflow: hidden;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  padding: 0;
-  font-size: 0;
-}
-
-.results-small .desc {
-  background-color: rgba(0, 0, 0, 0.25);
-  color: #fff;
-  font-size: 14px;
-  padding: 3px 10px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 128;
-}
-
-.spacer {
-  height: 50px; /* Spacer block to add custom space between sections */
+.eql-cntrb { 
+  font-size: smaller;
 }
 
 
-.interpolation-panel {
-  background: #f5f5f5;
-  border-radius: 10px;
-}
 
-.interpolation-panel .interpolation-image {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.interpolation-video-column {
-}
-
-.interpolation-panel .slider {
-  margin: 0 !important;
-}
-
-.interpolation-panel .slider {
-  margin: 0 !important;
-}
-
-#interpolation-image-wrapper {
-  width: 100%;
-}
-#interpolation-image-wrapper img {
-  border-radius: 5px;
-}
