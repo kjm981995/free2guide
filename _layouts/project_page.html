@@ -14,10 +14,12 @@
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/twentytwenty.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="./static/js/jquery.twentytwenty.js"></script>
 
   <!-- MathJax -->
   <script>
@@ -121,14 +123,12 @@
   </div>
 </section>
 
-  
-<!-- Image carousel -->
+<!--
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
-          <!-- Your images in a row -->
           <div class="image-container">
             <div class="image-item">
               <img src="static/image/c-A cute happy Corgi playing in park, sunset, Van Gogh style-0.gif" alt="MY ALT TEXT"/>
@@ -148,7 +148,35 @@
     </div>
   </div>
 </section>
-<!-- End image carousel -->
+-->
+
+<!-- Hero Teaser -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+      <div id="results-small" class="carousel results-small">
+
+        <div class="item">
+          <div class="twentytwenty-container main-container" data-orientation="horizontal" ratio="0.5556">
+              <img src="static/image/corgi-1.gif" width="100%" />
+              <img src="static/image/corgi-2.gif" width="100%" />
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container main-container" data-orientation="horizontal" ratio="0.5556">
+              <img src="static/image/corgi-1.gif" width="100%" />
+              <img src="static/image/corgi-2.gif" width="100%" />
+          </div>
+        </div>
+
+      </div>
+  </div>
+  <div class="spacer"></div>
+</section>
+
+<!-- End Teaser Video -->
 
   
 <section class="section">
@@ -175,6 +203,25 @@
     </div>
   </div>
 </footer>
+
+<script>
+$(function(){
+  $(".twentytwenty-container").twentytwenty({
+    default_offset_pct: 0.5, // How much of the before image is visible when the page loads
+    orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
+    // before_label: 'January 2017', // Set a custom before label
+    // after_label: 'March 2017', // Set a custom after label
+    // no_overlay: true, //Do not show the overlay with before and after
+    // move_slider_on_hover: true, // Move slider on mouse hover?
+    // move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
+    // click_to_move: false // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
+  });
+});
+$(function(){
+  $(".main-container").twentytwenty({default_offset_pct: 0.1, orientation: 'horizontal'});
+  // $(".twentytwenty-container", "#results-carousel").twentytwenty({default_offset_pct: 0.5, ratio: 0.5});
+});
+</script>
 
 </body>
 </html>
