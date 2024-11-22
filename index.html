@@ -298,9 +298,125 @@
 
       <div class="spacer"></div>
 
+      <div class="section-title has-text-centered" style="margin-bottom: 20px;">
+        <h2 class="title is-4">LaVie</h2>
+      </div>
+
       <div class="custom-slider-container">
-        <div class="custom-slider" id="custom-slider">
-            <!-- 첫 번째 세트 -->
+        <div class="custom-slider" id="slider1">
+
+          <div class="custom-slide">
+              <div class="custom-top-caption">"Gwen Stacy reading a book, tilt down."</div> <!-- Top caption added -->
+              <div class="custom-gif-wrapper">
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/Gwen Stacy reading a book, tilt down/B.gif" alt="GIF 4">
+                      <div class="custom-caption">Baseline</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/Gwen Stacy reading a book, tilt down/C.gif" alt="GIF 5">
+                      <div class="custom-caption">Baseline + CLIP</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/Gwen Stacy reading a book, tilt down/I.gif" alt="GIF 6">
+                      <div class="custom-caption">Baseline + IR</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/Gwen Stacy reading a book, tilt down/G.gif" alt="GIF 7">
+                      <div class="custom-caption">Baseline + GPT4o</div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="custom-slide">
+            <div class="custom-top-caption">"A space shuttle launching into orbit, with flames and smoke ..."</div> <!-- Top caption added -->
+            <div class="custom-gif-wrapper">
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/B.gif" alt="GIF 4">
+                    <div class="custom-caption">Baseline</div>
+                </div>
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/C.gif" alt="GIF 5">
+                    <div class="custom-caption">Baseline + CLIP</div>
+                </div>
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/I.gif" alt="GIF 6">
+                    <div class="custom-caption">Baseline + IR</div>
+                </div>
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/G.gif" alt="GIF 7">
+                    <div class="custom-caption">Baseline + GPT4o</div>
+                </div>
+            </div>
+          </div>
+
+          <div class="custom-slide">
+            <div class="custom-top-caption">"A beautiful coastal beach in spring, waves lapping on sand, pixel art."</div> <!-- Top caption added -->
+            <div class="custom-gif-wrapper">
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A beautiful coastal beach in spring, waves lapping on sand, pixel art/B.gif" alt="GIF 4">
+                    <div class="custom-caption">Baseline</div>
+                </div>
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A beautiful coastal beach in spring, waves lapping on sand, pixel art/C.gif" alt="GIF 5">
+                    <div class="custom-caption">Baseline + CLIP</div>
+                </div>
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A beautiful coastal beach in spring, waves lapping on sand, pixel art/I.gif" alt="GIF 6">
+                    <div class="custom-caption">Baseline + IR</div>
+                </div>
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A beautiful coastal beach in spring, waves lapping on sand, pixel art/G.gif" alt="GIF 7">
+                    <div class="custom-caption">Baseline + GPT4o</div>
+                </div>
+            </div>
+          </div>
+
+          <div class="custom-slide">
+            <div class="custom-top-caption">"A cute fluffy panda eating Chinese food in a restaurant."</div> <!-- Top caption added -->
+            <div class="custom-gif-wrapper">
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A cute fluffy panda eating Chinese food in a restaurant/B.gif" alt="GIF 4">
+                    <div class="custom-caption">Baseline</div>
+                </div>
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A cute fluffy panda eating Chinese food in a restaurant/C.gif" alt="GIF 5">
+                    <div class="custom-caption">Baseline + CLIP</div>
+                </div>
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A cute fluffy panda eating Chinese food in a restaurant/I.gif" alt="GIF 6">
+                    <div class="custom-caption">Baseline + IR</div>
+                </div>
+                <div class="custom-gif-container-4vid">
+                    <img src="./static/image/Comparison/LV/A cute fluffy panda eating Chinese food in a restaurant/G.gif" alt="GIF 7">
+                    <div class="custom-caption">Baseline + GPT4o</div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+    
+        <!-- 좌우 화살표 -->
+        <button class="custom-arrow custom-prev" onclick="moveCustomSlide('slider1', -1)">&#10094;</button>
+        <button class="custom-arrow custom-next" onclick="moveCustomSlide('slider1', 1)">&#10095;</button>
+
+        <div class="dots-container">
+          <span class="dot" onclick="setCurrentSlide('slider1', 0)"></span>
+          <span class="dot" onclick="setCurrentSlide('slider1', 1)"></span>
+          <span class="dot" onclick="setCurrentSlide('slider1', 2)"></span>
+          <span class="dot" onclick="setCurrentSlide('slider1', 3)"></span>
+          <!-- <span class="dot" onclick="setCurrentSlide('slider1', 4)"></span> -->
+        </div>
+      </div>
+      
+      <div class="spacer"></div>
+
+      <div class="section-title has-text-centered" style="margin-bottom: 20px;">
+        <h2 class="title is-4">VideoCrafter2</h2>
+      </div>
+
+      <div class="custom-slider-container" id="slider2-container">
+        <div class="custom-slider" id="slider2">
+
             <div class="custom-slide">
                 <div class="custom-top-caption">"A cat on the right of a dog, front view."</div> <!-- Top caption added -->
                 <div class="custom-gif-wrapper">
@@ -318,28 +434,6 @@
                     </div>
                     <div class="custom-gif-container-4vid">
                         <img src="./static/image/Comparison/VC/a cat on the right of a dog, front view/G.gif" alt="GIF 4">
-                        <div class="custom-caption">Baseline + GPT4o</div>
-                    </div>
-                </div>
-            </div>
-            <!-- 두 번째 세트 -->
-            <div class="custom-slide">
-                <div class="custom-top-caption">"Gwen Stacy reading a book, tilt down."</div> <!-- Top caption added -->
-                <div class="custom-gif-wrapper">
-                    <div class="custom-gif-container-4vid">
-                        <img src="./static/image/Comparison/LV/Gwen Stacy reading a book, tilt down/B.gif" alt="GIF 4">
-                        <div class="custom-caption">Baseline</div>
-                    </div>
-                    <div class="custom-gif-container-4vid">
-                        <img src="./static/image/Comparison/LV/Gwen Stacy reading a book, tilt down/C.gif" alt="GIF 5">
-                        <div class="custom-caption">Baseline + CLIP</div>
-                    </div>
-                    <div class="custom-gif-container-4vid">
-                        <img src="./static/image/Comparison/LV/Gwen Stacy reading a book, tilt down/I.gif" alt="GIF 6">
-                        <div class="custom-caption">Baseline + IR</div>
-                    </div>
-                    <div class="custom-gif-container-4vid">
-                        <img src="./static/image/Comparison/LV/Gwen Stacy reading a book, tilt down/G.gif" alt="GIF 7">
                         <div class="custom-caption">Baseline + GPT4o</div>
                     </div>
                 </div>
@@ -390,22 +484,22 @@
             </div>
 
             <div class="custom-slide">
-              <div class="custom-top-caption">"A space shuttle launching into orbit, with flames and smoke ..."</div> <!-- Top caption added -->
+              <div class="custom-top-caption">"A raccoon is playing the electronic guitar."</div> <!-- Top caption added -->
               <div class="custom-gif-wrapper">
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/B.gif" alt="GIF 4">
+                      <img src="./static/image/Comparison/VC/A raccoon is playing the electronic guitar/B.gif" alt="GIF 4">
                       <div class="custom-caption">Baseline</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/C.gif" alt="GIF 5">
+                      <img src="./static/image/Comparison/VC/A raccoon is playing the electronic guitar/C.gif" alt="GIF 5">
                       <div class="custom-caption">Baseline + CLIP</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/I.gif" alt="GIF 6">
+                      <img src="./static/image/Comparison/VC/A raccoon is playing the electronic guitar/I.gif" alt="GIF 6">
                       <div class="custom-caption">Baseline + IR</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/G.gif" alt="GIF 7">
+                      <img src="./static/image/Comparison/VC/A raccoon is playing the electronic guitar/G.gif" alt="GIF 7">
                       <div class="custom-caption">Baseline + GPT4o</div>
                   </div>
               </div>
@@ -414,18 +508,18 @@
         </div>
     
         <!-- 좌우 화살표 -->
-        <button class="custom-arrow custom-prev" onclick="moveCustomSlide(-1)">&#10094;</button>
-        <button class="custom-arrow custom-next" onclick="moveCustomSlide(1)">&#10095;</button>
+        <button class="custom-arrow custom-prev" onclick="moveCustomSlide('slider2', -1)">&#10094;</button>
+        <button class="custom-arrow custom-next" onclick="moveCustomSlide('slider2', 1)">&#10095;</button>
 
         <div class="dots-container">
-          <span class="dot" onclick="setCurrentSlide(0)"></span>
-          <span class="dot" onclick="setCurrentSlide(1)"></span>
-          <span class="dot" onclick="setCurrentSlide(2)"></span>
-          <span class="dot" onclick="setCurrentSlide(3)"></span>
-          <span class="dot" onclick="setCurrentSlide(4)"></span>
-          <!-- <span class="dot" onclick="setCurrentSlide(5)"></span> -->
+          <span class="dot" onclick="setCurrentSlide('slider2', 0)"></span>
+          <span class="dot" onclick="setCurrentSlide('slider2', 1)"></span>
+          <span class="dot" onclick="setCurrentSlide('slider2', 2)"></span>
+          <span class="dot" onclick="setCurrentSlide('slider2', 3)"></span>
+          <!-- <span class="dot" onclick="setCurrentSlide('slider2', 4)"></span> -->
         </div>
       </div>
+      
       <div class="spacer"></div>
 
       <p style="font-size:18px; margin-bottom:10px">
@@ -490,12 +584,12 @@
 
         <div class="item">
           <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
-            <div class="desc">A raccoon is playing the electronic guitar.</div>
+            <div class="desc">A panda playing on a swing set.</div>
             <div class="video">
-              <img src="./static/image/Results/VC/A raccoon is playing the electronic guitar/B.gif" width="100%" />
+              <img src="./static/image/Results/VC/A panda playing on a swing set/B.gif" width="100%" />
             </div>
             <div class="video">
-              <img src="./static/image/Results/VC/A raccoon is playing the electronic guitar/G.gif" width="100%" />
+              <img src="./static/image/Results/VC/A panda playing on a swing set/G.gif" width="100%" />
             </div>
           </div>
         </div>
@@ -676,39 +770,53 @@ $(function(){
 </script>
 
 <script>
-    let currentCustomIndex = 0;
-    const customSlider = document.getElementById('custom-slider');
-    const totalCustomSlides = document.querySelectorAll('.custom-slide').length;
-    const dots = document.querySelectorAll('.dot');
+const sliders = {
+  slider1: {
+    index: 0,
+    total: document.querySelectorAll('#slider1 .custom-slide').length,
+    dots: document.querySelectorAll('#slider1 + .dots-container .dot'),
+    slider: document.getElementById('slider1'),
+  },
+  slider2: {
+    index: 0,
+    total: document.querySelectorAll('#slider2 .custom-slide').length,
+    dots: document.querySelectorAll('#slider2 + .dots-container .dot'),
+    slider: document.getElementById('slider2'),
+  },
+};
 
-    function updateDots() {
-        dots.forEach((dot, index) => {
-            dot.classList.remove('active');
-            if (index === currentCustomIndex) {
-                dot.classList.add('active');
-            }
-        });
+function updateDots(sliderId) {
+  const { dots, index } = sliders[sliderId];
+  dots.forEach((dot, dotIndex) => {
+    dot.classList.remove('active');
+    if (dotIndex === index) {
+      dot.classList.add('active');
     }
+  });
+}
 
-    function moveCustomSlide(direction) {
-        currentCustomIndex += direction;
-        if (currentCustomIndex < 0) {
-            currentCustomIndex = totalCustomSlides - 1;
-        } else if (currentCustomIndex >= totalCustomSlides) {
-            currentCustomIndex = 0;
-        }
-        customSlider.style.transform = `translateX(-${currentCustomIndex * 100}%)`;
-        updateDots();
-    }
+function moveCustomSlide(sliderId, direction) {
+  const slider = sliders[sliderId];
+  slider.index += direction;
+  if (slider.index < 0) {
+    slider.index = slider.total - 1;
+  } else if (slider.index >= slider.total) {
+    slider.index = 0;
+  }
+  slider.slider.style.transform = `translateX(-${slider.index * 100}%)`;
+  updateDots(sliderId);
+}
 
-    function setCurrentSlide(index) {
-        currentCustomIndex = index;
-        customSlider.style.transform = `translateX(-${currentCustomIndex * 100}%)`;
-        updateDots();
-    }
+function setCurrentSlide(sliderId, newIndex) {
+  const slider = sliders[sliderId];
+  slider.index = newIndex;
+  slider.slider.style.transform = `translateX(-${slider.index * 100}%)`;
+  updateDots(sliderId);
+}
 
-    // 초기 활성 점 업데이트
-    updateDots();
+// Initialize dots for all sliders
+Object.keys(sliders).forEach((sliderId) => updateDots(sliderId));
+updateDots()
 </script>
 
 <!-- Statcounter tracking code -->
