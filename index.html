@@ -277,8 +277,7 @@
           <img src="static/image/Method/method.png" alt="fig_pipeline"/>
           <p style="font-size:18px; margin-top:30px;">
             Overall pipeline of Free<sup>2</sup>Guide, leveraging path integral control to enhance text-video alignment without requiring reward gradient.
-            During the sampling process, Free<sup>2</sup>Guide generates multiple denoised video samples and evaluate text alignment using non-differentiable
-            Large Vision-Language Models (LVLMs).
+            During the sampling process, Free<sup>2</sup>Guide generates multiple denoised video samples and evaluates text alignment using non-differentiable Large Vision-Language Models (LVLMs).
           </p>
         </div>
       </div>
@@ -347,44 +346,66 @@
             </div>
 
             <div class="custom-slide">
-              <div class="custom-top-caption">"A panda playing on a swing set."</div> <!-- Top caption added -->
+              <div class="custom-top-caption">"Cinematic shot of Van Gogh's selfie, Van Gogh style."</div> <!-- Top caption added -->
               <div class="custom-gif-wrapper">
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/VC/A panda playing on a swing set/B.gif" alt="GIF 4">
+                      <img src="./static/image/Comparison/VC/Cinematic shot of Van Gogh's selfie, Van Gogh style/B.gif" alt="GIF 4">
                       <div class="custom-caption">Baseline</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/VC/A panda playing on a swing set/C.gif" alt="GIF 5">
+                      <img src="./static/image/Comparison/VC/Cinematic shot of Van Gogh's selfie, Van Gogh style/C.gif" alt="GIF 5">
                       <div class="custom-caption">Baseline + CLIP</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/VC/A panda playing on a swing set/I.gif" alt="GIF 6">
+                      <img src="./static/image/Comparison/VC/Cinematic shot of Van Gogh's selfie, Van Gogh style/I.gif" alt="GIF 6">
                       <div class="custom-caption">Baseline + IR</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/VC/A panda playing on a swing set/G.gif" alt="GIF 7">
+                      <img src="./static/image/Comparison/VC/Cinematic shot of Van Gogh's selfie, Van Gogh style/G.gif" alt="GIF 7">
                       <div class="custom-caption">Baseline + GPT4o</div>
                   </div>
               </div>
             </div>
 
             <div class="custom-slide">
-              <div class="custom-top-caption">"A cute fluffy panda eating Chinese food in a restaurant."</div> <!-- Top caption added -->
+              <div class="custom-top-caption">"Two pandas discussing an academic paper."</div> <!-- Top caption added -->
               <div class="custom-gif-wrapper">
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/LV/A cute fluffy panda eating Chinese food in a restaurant/B.gif" alt="GIF 4">
+                      <img src="./static/image/Comparison/VC/Two pandas discussing an academic paper/B.gif" alt="GIF 4">
                       <div class="custom-caption">Baseline</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/LV/A cute fluffy panda eating Chinese food in a restaurant/C.gif" alt="GIF 5">
+                      <img src="./static/image/Comparison/VC/Two pandas discussing an academic paper/C.gif" alt="GIF 5">
                       <div class="custom-caption">Baseline + CLIP</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/LV/A cute fluffy panda eating Chinese food in a restaurant/I.gif" alt="GIF 6">
+                      <img src="./static/image/Comparison/VC/Two pandas discussing an academic paper/I.gif" alt="GIF 6">
                       <div class="custom-caption">Baseline + IR</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/LV/A cute fluffy panda eating Chinese food in a restaurant/G.gif" alt="GIF 7">
+                      <img src="./static/image/Comparison/VC/Two pandas discussing an academic paper/G.gif" alt="GIF 7">
+                      <div class="custom-caption">Baseline + GPT4o</div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="custom-slide">
+              <div class="custom-top-caption">"A space shuttle launching into orbit, with flames and smoke ..."</div> <!-- Top caption added -->
+              <div class="custom-gif-wrapper">
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/B.gif" alt="GIF 4">
+                      <div class="custom-caption">Baseline</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/C.gif" alt="GIF 5">
+                      <div class="custom-caption">Baseline + CLIP</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/I.gif" alt="GIF 6">
+                      <div class="custom-caption">Baseline + IR</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/G.gif" alt="GIF 7">
                       <div class="custom-caption">Baseline + GPT4o</div>
                   </div>
               </div>
@@ -401,11 +422,15 @@
           <span class="dot" onclick="setCurrentSlide(1)"></span>
           <span class="dot" onclick="setCurrentSlide(2)"></span>
           <span class="dot" onclick="setCurrentSlide(3)"></span>
-          <!-- <span class="dot" onclick="setCurrentSlide(4)"></span> -->
+          <span class="dot" onclick="setCurrentSlide(4)"></span>
           <!-- <span class="dot" onclick="setCurrentSlide(5)"></span> -->
         </div>
       </div>
       <div class="spacer"></div>
+
+      <p style="font-size:18px; margin-bottom:10px">
+        Image-based models are inherently limited in processing time-dependent features like motion, flow, and dynamics, making them unsuitable for providing high-quality guidance on temporal dynamics. In contrast, while LVLMs are trained on static image-text data, their extensive pretraining on diverse visual contexts enables them to effectively capture motion elements, enabling superior temporal guidance.
+      </p>
     </div>
   </div>
 </section>
@@ -422,6 +447,8 @@
       <div class="section-title has-text-centered">
         <h2 class="title is-4">1. LVLMs as Reward Models</h2>
       </div>
+
+      <div class="spacer"></div>
       
       <div id="results-carousel" class="carousel results-carousel">
         
@@ -439,7 +466,7 @@
 
         <div class="item">
           <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
-            <div class="desc">A bear on the right of a zebra, front view</div>
+            <div class="desc">A bear on the right of a zebra, front view.</div>
             <div class="video">
               <img src="./static/image/Results/VC/a bear on the right of a zebra, front view/B.gif" width="100%" />
             </div>
@@ -463,12 +490,12 @@
 
         <div class="item">
           <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
-            <div class="desc">An astronaut flying in space, Van Gogh style.</div>
+            <div class="desc">A raccoon is playing the electronic guitar.</div>
             <div class="video">
-              <img src="./static/image/Results/VC/An astronaut flying in space, Van Gogh style/B.gif" width="100%" />
+              <img src="./static/image/Results/VC/A raccoon is playing the electronic guitar/B.gif" width="100%" />
             </div>
             <div class="video">
-              <img src="./static/image/Results/VC/An astronaut flying in space, Van Gogh style/G.gif" width="100%" />
+              <img src="./static/image/Results/VC/A raccoon is playing the electronic guitar/G.gif" width="100%" />
             </div>
           </div>
         </div>
@@ -477,8 +504,7 @@
       <div class="spacer"></div>
 
       <p style="font-size:18px; margin-bottom:10px">
-        We observe that leveraging the GPT-4o model to assess text-video alignment improves alignment with respect to temporal dynamics (e.g. "tilt down") and semantic representation (e.g. "A and B").
-        These results indicate that LVLM can account for temporal information by processing multiple sub-frames of video simultaneously, with strong performance in spatial understanding.
+        Since our framework does not require differentiability in the reward model, we can utilize powerful black-box LVLMs that are capable of capturing temporal information for video alignment. These LVLMs serve as reward models, leveraging their temporal awareness to effectively assess text-video alignment.
       </p>
 
       <div class="spacer"></div>
@@ -486,29 +512,32 @@
       <div class="section-title has-text-centered">
         <h2 class="title is-4"> 2. Ensembling with LVLMs</h2>
       </div>
+
+      <div class="spacer"></div>
       
+      <div class="custom-top-caption"><strong>Improving CLIP with GPT4o</strong></div>
       <div id="results-carousel" class="carousel results-carousel">
         
         <div class="item">
           <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
             <div class="desc">A bus and a traffic light.</div>
             <div class="video">
-              <img src="./static/image/Ensemble/a bus and a traffic light/B.gif" width="100%" />
+              <img src="./static/image/Ensemble/LV_CLIP/a bus and a traffic light/B.gif" width="100%" />
             </div>
             <div class="video">
-              <img src="./static/image/Ensemble/a bus and a traffic light/G.gif" width="100%" />
+              <img src="./static/image/Ensemble/LV_CLIP/a bus and a traffic light/G.gif" width="100%" />
             </div>
           </div>
         </div>
 
         <div class="item">
           <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
-            <div class="desc">A cute happy Corgi playing in park, sunset, black and white.</div>
+            <div class="desc">A super cool giant robot in Cyberpunk Beijing.</div>
             <div class="video">
-              <img src="./static/image/Ensemble/A cute happy Corgi playing in park, sunset, black and white/B.gif" width="100%" />
+              <img src="./static/image/Ensemble/VC_CLIP/A super cool giant robot in Cyberpunk Beijing/B.gif" width="100%" />
             </div>
             <div class="video">
-              <img src="./static/image/Ensemble/A cute happy Corgi playing in park, sunset, black and white/G.gif" width="100%" />
+              <img src="./static/image/Ensemble/VC_CLIP/A super cool giant robot in Cyberpunk Beijing/G.gif" width="100%" />
             </div>
           </div>
         </div>
@@ -517,22 +546,75 @@
           <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
             <div class="desc">A bicycle and an airplane.</div>
             <div class="video">
-              <img src="./static/image/Ensemble/a bicycle and an airplane/B.gif" width="100%" />
+              <img src="./static/image/Ensemble/VC_CLIP/a bicycle and an airplane/B.gif" width="100%" />
             </div>
             <div class="video">
-              <img src="./static/image/Ensemble/a bicycle and an airplane/G.gif" width="100%" />
+              <img src="./static/image/Ensemble/VC_CLIP/a bicycle and an airplane/G.gif" width="100%" />
             </div>
           </div>
         </div>
 
         <div class="item">
           <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
-            <div class="desc">This is how I do makeup in the morning.</div>
+            <div class="desc">A bowl and a remote.</div>
             <div class="video">
-              <img src="./static/image/Ensemble/this is how I do makeup in the morning/B.gif" width="100%" />
+              <img src="./static/image/Ensemble/LV_CLIP/a bowl and a remote/B.gif" width="100%" />
             </div>
             <div class="video">
-              <img src="./static/image/Ensemble/this is how I do makeup in the morning/G.gif" width="100%" />
+              <img src="./static/image/Ensemble/LV_CLIP/a bowl and a remote/G.gif" width="100%" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+      <div class="custom-top-caption"><strong>Improving ImageReward with GPT4o</strong></div>
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
+            <div class="desc">This is how I do makeup in the morning.</div>
+            <div class="video">
+              <img src="./static/image/Ensemble/LV_IR/this is how I do makeup in the morning/B.gif" width="100%" />
+            </div>
+            <div class="video">
+              <img src="./static/image/Ensemble/LV_IR/this is how I do makeup in the morning/G.gif" width="100%" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
+            <div class="desc">A cute happy Corgi playing in park, sunset, black and white.</div>
+            <div class="video">
+              <img src="./static/image/Ensemble/VC_IR/A cute happy Corgi playing in park, sunset, black and white/B.gif" width="100%" />
+            </div>
+            <div class="video">
+              <img src="./static/image/Ensemble/VC_IR/A cute happy Corgi playing in park, sunset, black and white/G.gif" width="100%" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
+            <div class="desc">A beautiful coastal beach in spring, waves lapping on sand, pan left.</div>
+            <div class="video">
+              <img src="./static/image/Ensemble/VC_IR/A beautiful coastal beach in spring, waves lapping on sand, pan left/B.gif" width="100%" />
+            </div>
+            <div class="video">
+              <img src="./static/image/Ensemble/VC_IR/A beautiful coastal beach in spring, waves lapping on sand, pan left/G.gif" width="100%" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="1">
+            <div class="desc">The bund Shanghai, pan right.</div>
+            <div class="video">
+              <img src="./static/image/Ensemble/LV_IR/The bund Shanghai, pan right/B.gif" width="100%" />
+            </div>
+            <div class="video">
+              <img src="./static/image/Ensemble/LV_IR/The bund Shanghai, pan right/G.gif" width="100%" />
             </div>
           </div>
         </div>
@@ -541,8 +623,8 @@
       <div class="spacer"></div>
 
       <p style="font-size:18px; margin-bottom:10px">
+        Leveraging LVLMs' ability to model temporal dynamics, ensembling techniques can be employed to combine insights from large-scale image models, enhancing text-video alignment through complementary guidance. This approach enables LVLMs to process temporal information, enhancing the quality of guidance.
         Unlike gradient-based guidance, our method significantly reduces memory requirements by avoiding the computationally intensive backpropagation process. This enables us to concurrently employ multiple rewards for sampling guidance, potentially leading to synergistic benefits with large-scale image models.
-        We explore ensemble methods that allow LVLMs to incorporate temporal information, thereby supporting more effective guidance for video alignment when combined with large-scale image models.
       </p>
     </div>
   </div>
