@@ -399,7 +399,7 @@
         <button class="custom-arrow custom-prev" onclick="moveCustomSlide('slider1', -1)">&#10094;</button>
         <button class="custom-arrow custom-next" onclick="moveCustomSlide('slider1', 1)">&#10095;</button>
 
-        <div class="dots-container">
+        <div class="dots-container" data-slider="slider1">
           <span class="dot" onclick="setCurrentSlide('slider1', 0)"></span>
           <span class="dot" onclick="setCurrentSlide('slider1', 1)"></span>
           <span class="dot" onclick="setCurrentSlide('slider1', 2)"></span>
@@ -511,7 +511,7 @@
         <button class="custom-arrow custom-prev" onclick="moveCustomSlide('slider2', -1)">&#10094;</button>
         <button class="custom-arrow custom-next" onclick="moveCustomSlide('slider2', 1)">&#10095;</button>
 
-        <div class="dots-container">
+        <div class="dots-container" data-slider="slider2">
           <span class="dot" onclick="setCurrentSlide('slider2', 0)"></span>
           <span class="dot" onclick="setCurrentSlide('slider2', 1)"></span>
           <span class="dot" onclick="setCurrentSlide('slider2', 2)"></span>
@@ -774,13 +774,15 @@ const sliders = {
   slider1: {
     index: 0,
     total: document.querySelectorAll('#slider1 .custom-slide').length,
-    dots: document.querySelectorAll('#slider1 + .dots-container .dot'),
+    // dots: document.querySelectorAll('#slider1 + .dots-container .dot'),
+    dots: document.querySelectorAll('.dots-container[data-slider="slider1"] .dot'),
     slider: document.getElementById('slider1'),
   },
   slider2: {
     index: 0,
     total: document.querySelectorAll('#slider2 .custom-slide').length,
-    dots: document.querySelectorAll('#slider2 + .dots-container .dot'),
+    // dots: document.querySelectorAll('#slider2 + .dots-container .dot'),
+    dots: document.querySelectorAll('.dots-container[data-slider="slider2"] .dot'),
     slider: document.getElementById('slider2'),
   },
 };
@@ -816,7 +818,7 @@ function setCurrentSlide(sliderId, newIndex) {
 
 // Initialize dots for all sliders
 Object.keys(sliders).forEach((sliderId) => updateDots(sliderId));
-updateDots()
+
 </script>
 
 <!-- Statcounter tracking code -->
