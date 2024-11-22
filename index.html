@@ -299,30 +299,12 @@
 
       <div class="spacer"></div>
 
+      <div class="section-title has-text-centered">
+        <h2 class="title is-4">LaVie</h2>
+      </div>      
+
       <div class="custom-slider-container">
         <div class="custom-slider" id="custom-slider">
-            <!-- 첫 번째 세트 -->
-            <div class="custom-slide">
-                <div class="custom-top-caption">"A cat on the right of a dog, front view."</div> <!-- Top caption added -->
-                <div class="custom-gif-wrapper">
-                    <div class="custom-gif-container-4vid">
-                        <img src="./static/image/Comparison/VC/a cat on the right of a dog, front view/B.gif" alt="GIF 1">
-                        <div class="custom-caption">Baseline</div>
-                    </div>
-                    <div class="custom-gif-container-4vid">
-                        <img src="./static/image/Comparison/VC/a cat on the right of a dog, front view/C.gif" alt="GIF 2">
-                        <div class="custom-caption">Baseline + CLIP</div>
-                    </div>
-                    <div class="custom-gif-container-4vid">
-                        <img src="./static/image/Comparison/VC/a cat on the right of a dog, front view/I.gif" alt="GIF 3">
-                        <div class="custom-caption">Baseline + IR</div>
-                    </div>
-                    <div class="custom-gif-container-4vid">
-                        <img src="./static/image/Comparison/VC/a cat on the right of a dog, front view/G.gif" alt="GIF 4">
-                        <div class="custom-caption">Baseline + GPT4o</div>
-                    </div>
-                </div>
-            </div>
             <!-- 두 번째 세트 -->
             <div class="custom-slide">
                 <div class="custom-top-caption">"Gwen Stacy reading a book, tilt down."</div> <!-- Top caption added -->
@@ -347,22 +329,44 @@
             </div>
 
             <div class="custom-slide">
-              <div class="custom-top-caption">"A panda playing on a swing set."</div> <!-- Top caption added -->
+              <div class="custom-top-caption">"A space shuttle launching into orbit, with flames and smoke billowing out from the engines."</div> <!-- Top caption added -->
               <div class="custom-gif-wrapper">
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/VC/A panda playing on a swing set/B.gif" alt="GIF 4">
+                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/B.gif" alt="GIF 4">
                       <div class="custom-caption">Baseline</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/VC/A panda playing on a swing set/C.gif" alt="GIF 5">
+                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/C.gif" alt="GIF 5">
                       <div class="custom-caption">Baseline + CLIP</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/VC/A panda playing on a swing set/I.gif" alt="GIF 6">
+                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/I.gif" alt="GIF 6">
                       <div class="custom-caption">Baseline + IR</div>
                   </div>
                   <div class="custom-gif-container-4vid">
-                      <img src="./static/image/Comparison/VC/A panda playing on a swing set/G.gif" alt="GIF 7">
+                      <img src="./static/image/Comparison/LV/A space shuttle launching into orbit, with flames and smoke billowing out from the engines/G.gif" alt="GIF 7">
+                      <div class="custom-caption">Baseline + GPT4o</div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="custom-slide">
+              <div class="custom-top-caption">"A beautiful coastal beach in spring, waves lapping on sand, pixel art."</div> <!-- Top caption added -->
+              <div class="custom-gif-wrapper">
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/A beautiful coastal beach in spring, waves lapping on sand, pixel art/B.gif" alt="GIF 4">
+                      <div class="custom-caption">Baseline</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/A beautiful coastal beach in spring, waves lapping on sand, pixel art/C.gif" alt="GIF 5">
+                      <div class="custom-caption">Baseline + CLIP</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/A beautiful coastal beach in spring, waves lapping on sand, pixel art/I.gif" alt="GIF 6">
+                      <div class="custom-caption">Baseline + IR</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/LV/A beautiful coastal beach in spring, waves lapping on sand, pixel art/G.gif" alt="GIF 7">
                       <div class="custom-caption">Baseline + GPT4o</div>
                   </div>
               </div>
@@ -389,6 +393,116 @@
                   </div>
               </div>
             </div>
+          
+        </div>
+    
+        <!-- 좌우 화살표 -->
+        <button class="custom-arrow custom-prev" onclick="moveCustomSlide(-1)">&#10094;</button>
+        <button class="custom-arrow custom-next" onclick="moveCustomSlide(1)">&#10095;</button>
+
+        <div class="dots-container">
+          <span class="dot" onclick="setCurrentSlide(0)"></span>
+          <span class="dot" onclick="setCurrentSlide(1)"></span>
+          <span class="dot" onclick="setCurrentSlide(2)"></span>
+          <span class="dot" onclick="setCurrentSlide(3)"></span>
+          <!-- <span class="dot" onclick="setCurrentSlide(4)"></span> -->
+          <!-- <span class="dot" onclick="setCurrentSlide(5)"></span> -->
+        </div>
+      </div>
+
+      <div class="section-title has-text-centered">
+        <h2 class="title is-4">VideoCrafter2</h2>
+      </div>      
+
+      <div class="custom-slider-container">
+        <div class="custom-slider" id="custom-slider">
+            <!-- 두 번째 세트 -->
+            <div class="custom-slide">
+                <div class="custom-top-caption">"Cinematic shot of Van Gogh's selfie, Van Gogh style."</div> <!-- Top caption added -->
+                <div class="custom-gif-wrapper">
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/Comparison/VC/Cinematic shot of Van Gogh's selfie, Van Gogh style/B.gif" alt="GIF 4">
+                        <div class="custom-caption">Baseline</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/Comparison/VC/Cinematic shot of Van Gogh's selfie, Van Gogh style/C.gif" alt="GIF 5">
+                        <div class="custom-caption">Baseline + CLIP</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/Comparison/VC/Cinematic shot of Van Gogh's selfie, Van Gogh style/I.gif" alt="GIF 6">
+                        <div class="custom-caption">Baseline + IR</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/Comparison/VC/Cinematic shot of Van Gogh's selfie, Van Gogh style/G.gif" alt="GIF 7">
+                        <div class="custom-caption">Baseline + GPT4o</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 첫 번째 세트 -->
+            <div class="custom-slide">
+                <div class="custom-top-caption">"A cat on the right of a dog, front view."</div> <!-- Top caption added -->
+                <div class="custom-gif-wrapper">
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/Comparison/VC/a cat on the right of a dog, front view/B.gif" alt="GIF 1">
+                        <div class="custom-caption">Baseline</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/Comparison/VC/a cat on the right of a dog, front view/C.gif" alt="GIF 2">
+                        <div class="custom-caption">Baseline + CLIP</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/Comparison/VC/a cat on the right of a dog, front view/I.gif" alt="GIF 3">
+                        <div class="custom-caption">Baseline + IR</div>
+                    </div>
+                    <div class="custom-gif-container-4vid">
+                        <img src="./static/image/Comparison/VC/a cat on the right of a dog, front view/G.gif" alt="GIF 4">
+                        <div class="custom-caption">Baseline + GPT4o</div>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-slide">
+              <div class="custom-top-caption">"A raccoon is playing the electronic guitar."</div> <!-- Top caption added -->
+              <div class="custom-gif-wrapper">
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/VC/A raccoon is playing the electronic guitar/B.gif" alt="GIF 4">
+                      <div class="custom-caption">Baseline</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/VC/A raccoon is playing the electronic guitar/C.gif" alt="GIF 5">
+                      <div class="custom-caption">Baseline + CLIP</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/VC/A raccoon is playing the electronic guitar/I.gif" alt="GIF 6">
+                      <div class="custom-caption">Baseline + IR</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/VC/A raccoon is playing the electronic guitar/G.gif" alt="GIF 7">
+                      <div class="custom-caption">Baseline + GPT4o</div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="custom-slide">
+              <div class="custom-top-caption">"Two pandas discussing an academic paper."</div> <!-- Top caption added -->
+              <div class="custom-gif-wrapper">
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/VC/Two pandas discussing an academic paper/B.gif" alt="GIF 4">
+                      <div class="custom-caption">Baseline</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/VC/Two pandas discussing an academic paper/C.gif" alt="GIF 5">
+                      <div class="custom-caption">Baseline + CLIP</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/VC/Two pandas discussing an academic paper/I.gif" alt="GIF 6">
+                      <div class="custom-caption">Baseline + IR</div>
+                  </div>
+                  <div class="custom-gif-container-4vid">
+                      <img src="./static/image/Comparison/VC/Two pandas discussing an academic paper/G.gif" alt="GIF 7">
+                      <div class="custom-caption">Baseline + GPT4o</div>
+                  </div>
+              </div>
+            </div>
 
         </div>
     
@@ -405,6 +519,7 @@
           <!-- <span class="dot" onclick="setCurrentSlide(5)"></span> -->
         </div>
       </div>
+      
       <div class="spacer"></div>
     </div>
   </div>
