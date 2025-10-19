@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Free$^2$Guide: Gradient-Free Path Integral Control for Enhancing Text-to-Video Generation with Large Vision-Language Models</title>
+  <title>Free<sup>2</sup>Guide: Training-Free Text-to-Video Alignment using Image LVLM</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -185,13 +185,13 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">[ICCV 2025] Free<sup>2</sup>Guide: Gradient-Free Path Integral Control for Enhancing Text-to-Video Generation with Large Vision-Language Models</h1>
+            <h1 class="title is-1 publication-title">[ICCV 2025] Free<sup>2</sup>Guide: Training-Free Text-to-Video Alignment using Image LVLM</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://kjm981995.github.io/" target="_blank">Jaemin Kim</a>,</span>
                 <span class="author-block">
-                  <a href="https://bryanswkim.github.io/" target="_blank">Bryan S Kim</a>,</span>
+                  <a href="https://bryanswkim.github.io/" target="_blank">Bryan Sangwoo Kim</a>,</span>
                   <span class="author-block">
                     <a href="https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en" target="_blank">Jong Chul Ye</a>
                   </span>
@@ -280,7 +280,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p style="font-size:18px;">
-            Diffusion models have achieved impressive results in generative tasks like text-to-image (T2I) and text-to-video (T2V) synthesis. However, achieving accurate text alignment in T2V generation remains challenging due to the complex temporal dependency across frames. Existing reinforcement learning (RL)-based approaches to enhance text alignment often require differentiable reward functions or are constrained to limited prompts, hindering their scalability and applicability. In this paper, we propose <strong>Free<sup>2</sup>Guide</strong>, a novel gradient-free framework for aligning generated videos with text prompts without requiring additional model training. Leveraging principles from path integral control, Free<sup>2</sup>Guide approximates guidance for diffusion models using non-differentiable reward functions, thereby enabling the integration of powerful black-box Large Vision-Language Models (LVLMs) as reward model. Additionally, our framework supports the flexible ensembling of multiple reward models, including large-scale image-based models, to synergistically enhance alignment without incurring substantial computational overhead. We demonstrate that <strong>Free<sup>2</sup>Guide</strong> significantly improves text alignment across various dimensions and enhances the overall quality of generated videos.
+            Diffusion models have achieved impressive results in generative tasks for text-to-video (T2V) synthesis. However, achieving accurate text alignment in T2V generation remains challenging due to the complex temporal dependencies across frames. Existing reinforcement learning (RL)-based approaches to enhance text alignment often require differentiable reward functions trained for videos, hindering their scalability and applicability. In this paper, we propose Free<sup>2</sup>Guide, a novel gradient-free  and training-free framework for aligning generated videos with text prompts. Specifically, leveraging principles from path integral control, Free<sup>2</sup>Guide approximates guidance for diffusion models using non-differentiable reward functions, thereby enabling the integration of powerful black-box Large Vision-Language Models (LVLMs) as reward models. To enable image-trained LVLMs to assess text-to-video alignment, we leverage \textit{stitching} between video frames and use system prompts to capture sequential attributions. Our framework supports the flexible ensembling of multiple reward models to synergistically enhance alignment without significant computational overhead. Experimental results confirm that Free<sup>2</sup>Guide using image-trained LVLMs significantly improves text-to-video alignment, thereby enhancing the overall video  quality.
         </div>
       </div>
     </div>
